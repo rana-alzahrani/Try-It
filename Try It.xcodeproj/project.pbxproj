@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25C536772A1CE41C00FEFBF9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C536762A1CE41C00FEFBF9 /* Profile.swift */; };
 		9619D5792A13B6AE00592D17 /* Try_ItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619D5782A13B6AE00592D17 /* Try_ItApp.swift */; };
 		9619D57B2A13B6AE00592D17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9619D57A2A13B6AE00592D17 /* ContentView.swift */; };
 		9619D57D2A13B6AE00592D17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9619D57C2A13B6AE00592D17 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25C536762A1CE41C00FEFBF9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		9619D5752A13B6AE00592D17 /* Try It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Try It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9619D5782A13B6AE00592D17 /* Try_ItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Try_ItApp.swift; sourceTree = "<group>"; };
 		9619D57A2A13B6AE00592D17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,9 +34,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25C536752A1CE3B900FEFBF9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				25C536762A1CE41C00FEFBF9 /* Profile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		9619D56C2A13B6AE00592D17 = {
 			isa = PBXGroup;
 			children = (
+				25C536752A1CE3B900FEFBF9 /* Profile */,
 				9619D5772A13B6AE00592D17 /* Try It */,
 				9619D5762A13B6AE00592D17 /* Products */,
 			);
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9619D57B2A13B6AE00592D17 /* ContentView.swift in Sources */,
+				25C536772A1CE41C00FEFBF9 /* Profile.swift in Sources */,
 				9619D5792A13B6AE00592D17 /* Try_ItApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
