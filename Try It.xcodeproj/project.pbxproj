@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EB8A54F2A1CF582003C385A /* Discovering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8A54E2A1CF582003C385A /* Discovering.swift */; };
 		25C536772A1CE41C00FEFBF9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C536762A1CE41C00FEFBF9 /* Profile.swift */; };
 		25C5367B2A1CEBDD00FEFBF9 /* My Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C5367A2A1CEBDD00FEFBF9 /* My Activities.swift */; };
 		5FFF34172A1CE6F2007641BC /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFF34162A1CE6F2007641BC /* Add.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1EB8A54E2A1CF582003C385A /* Discovering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discovering.swift; sourceTree = "<group>"; };
 		25C536762A1CE41C00FEFBF9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		25C5367A2A1CEBDD00FEFBF9 /* My Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "My Activities.swift"; sourceTree = "<group>"; };
 		5FFF34162A1CE6F2007641BC /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				25C536762A1CE41C00FEFBF9 /* Profile.swift */,
 				9619D5A02A1CF49000592D17 /* Home.swift */,
 				5FFF34162A1CE6F2007641BC /* Add.swift */,
+				1EB8A54E2A1CF582003C385A /* Discovering.swift */,
 				9619D57C2A13B6AE00592D17 /* Assets.xcassets */,
 				9619D57E2A13B6AE00592D17 /* Preview Content */,
 			);
@@ -151,6 +154,7 @@
 			files = (
 				25C5367B2A1CEBDD00FEFBF9 /* My Activities.swift in Sources */,
 				9619D57B2A13B6AE00592D17 /* ContentView.swift in Sources */,
+				1EB8A54F2A1CF582003C385A /* Discovering.swift in Sources */,
 				5FFF34172A1CE6F2007641BC /* Add.swift in Sources */,
 				25C536772A1CE41C00FEFBF9 /* Profile.swift in Sources */,
 				9619D5A12A1CF49000592D17 /* Home.swift in Sources */,
