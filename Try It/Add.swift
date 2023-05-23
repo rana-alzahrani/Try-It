@@ -48,7 +48,7 @@ struct Add: View {
                                 .stroke(Color.gray)
                                 .frame(width: 342, height: 48)
                             TextField("Add Description", text: $username1, axis: .vertical)
-                                .frame(width: 342,height: 48)
+                                .frame(width: 325,height: 48)
                         }
                     }
                     ZStack{
@@ -124,13 +124,13 @@ struct Add: View {
                         
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.gray)
-                            .frame(width: 348, height: 48)
+                            .frame(width: 340, height: 48)
                         HStack{
                             Image(systemName: "person.3")
                                 .padding(.leading, 50.0)
                             TextField("Number of people", text: $number3)
                             
-                                .frame(width: 339, height: 50)
+                                .frame(width: 330, height: 50)
                         }
                     }
                     VStack {
@@ -157,13 +157,13 @@ struct Add: View {
                     ZStack{
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.gray)
-                            .frame(width: 348, height: 48)
+                            .frame(width: 340, height: 48)
                         HStack{
                             Image(systemName: "location")
                                 .padding(.leading, 50.0)
                             TextField("Activity location", text: $number5)
                             
-                                .frame(width: 348, height: 50)
+                                .frame(width: 330, height: 50)
                         }
                     }
                 }
