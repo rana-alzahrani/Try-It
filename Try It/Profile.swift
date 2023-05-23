@@ -13,14 +13,15 @@ struct Profile: View {
     @State var email: String = ""
     @State var dateOfbirth: String = ""
     @State var password: String = ""
+    
     var body: some View {
         VStack(alignment: .trailing) {
             Button("Edit") {
             }
             .foregroundColor(.black)
             .underline()
-                .offset(x: -15,y: -15)
-                .padding()
+            .offset(x: -15,y: -15)
+            .padding()
             VStack {
                 Circle()
                     .frame(width: 157, height: 157)
@@ -86,20 +87,20 @@ struct Profile: View {
                                 .foregroundColor(.gray)
                         }
                 }
-                    HStack {
-                        Image(systemName: "rectangle.portrait.and.arrow.right")
-                            .resizable()
-                            .frame(width:22 ,height: 22)
-                            .imageScale(.medium)
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("Color2"))
-                        Button("Logout") {
-                        }
-                        .font(.headline)
-                        .fontWeight(.medium)
+                HStack {
+                    Image(systemName: "rectangle.portrait.and.arrow.right")
+                        .resizable()
+                        .frame(width:22 ,height: 22)
+                        .imageScale(.medium)
+                        .fontWeight(.semibold)
                         .foregroundColor(Color("Color2"))
-                        .cornerRadius(22)
-                    }.offset(x: -120,y: 40)
+                    Button("Logout") {
+                    }
+                    .font(.headline)
+                    .fontWeight(.medium)
+                    .foregroundColor(Color("Color2"))
+                    .cornerRadius(22)
+                }.offset(x: -120,y: 40)
             }
             Spacer()
         }.padding(.vertical)
