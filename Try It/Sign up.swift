@@ -92,7 +92,7 @@ struct Sign_up: View {
                 
             }
             HStack{
-                Text("Don’t have an account? ")
+                Text("Already have an account?")
                     .foregroundColor(.black)
                     .offset(y:30)
                     .font(.system(size: 12))
@@ -101,7 +101,7 @@ struct Sign_up: View {
                 Button{
                     
                 }label: {
-                    Text("Sign up")
+                    Text("Sign in")
                         .foregroundColor(.black)
                         .underline()
                         .offset(y:-1)
