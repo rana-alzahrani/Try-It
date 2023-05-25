@@ -18,9 +18,10 @@ struct DiscoverView: View{
             VStack{
                 Image(systemName: "plus")
                     .padding(.leading,300)
+                  
                 
                 Spacer()
-                    .frame(height: 80)
+                    .frame(height: 60)
                 
                 ScrollView(.horizontal){
                 HStack{
@@ -108,7 +109,9 @@ struct DiscoverView: View{
                                                 })
                                                 //
                                                 
-                                            }.padding()
+                }.padding(.bottom,580)
+                 .padding(.leading,15)
+                    
                                         }
                 
             }
