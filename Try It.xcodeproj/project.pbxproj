@@ -75,9 +75,9 @@
 				5FFF34162A1CE6F2007641BC /* Add.swift */,
 				1EB8A54E2A1CF582003C385A /* Discovering.swift */,
 				1EB8A5522A1E3292003C385A /* Sign up.swift */,
-				9619D57C2A13B6AE00592D17 /* Assets.xcassets */,
 				1EB8A5542A1E32F4003C385A /* sign in.swift */,
 				1EB8A5562A1E3314003C385A /* CheckBoxView.swift */,
+				9619D57C2A13B6AE00592D17 /* Assets.xcassets */,
 				9619D57E2A13B6AE00592D17 /* Preview Content */,
 			);
 			path = "Try It";
