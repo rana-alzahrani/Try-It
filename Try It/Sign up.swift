@@ -93,7 +93,10 @@ struct Sign_up: View {
             .background(RoundedRectangle(cornerRadius: 11).stroke(self.password != "" ? Color("color g") : Color("color g"),lineWidth: 2)
             .frame(width:358, height:44))
             
-            Button("Sign Up") {
+            Spacer()
+                .frame(height:60)
+            
+            Button() {
                 
                 
                 vm.signUp(email: email, password: password) { result in
@@ -104,27 +107,18 @@ struct Sign_up: View {
                         vm.errorMessage = error.errorMessage
                     }
                 }
-                
-                
+            }label: {
+                Text("Sign up")
+                    .foregroundColor(Color.white)
+                    .frame(width: 350,height: 45)
+                    .background(Color("Color3"))
+                    .cornerRadius(10)
             }
             
             if let errorMessage = vm.errorMessage {
                 Text(errorMessage)
             }
             
-        label: do {
-//                Text("Sign up")
-//
-//                    .frame(width: 358, height: 50)
-//                    .fontWeight(.semibold)
-//                    .font(.system(size: 20))
-//                    .foregroundColor(.white)
-//                    .background(Color("color p"))
-//                    .cornerRadius(10)
-                
-                
-                
-            }
             
             HStack{
                 Text("Already have an account?")

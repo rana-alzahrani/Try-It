@@ -53,8 +53,10 @@ struct Add: View {
                                
                         }
                         
+                        
                     }
                     .padding(.leading, 40)
+                    
                     
                     VStack{
                         ZStack{
@@ -113,7 +115,10 @@ struct Add: View {
                             Image(systemName: "calendar")
                             
                         }
+                        Spacer()
+                            .frame(height:60)
                     }
+                    
                     ZStack{
                         RoundedRectangle(cornerRadius: 4.0)
                             .stroke(Color.gray)
@@ -159,7 +164,8 @@ struct Add: View {
                             
                                 .frame(width: 339, height: 50)
                             
-                            
+                            Spacer()
+                                .frame(height:60)
                         }
                     }
                     ZStack{
@@ -187,6 +193,8 @@ struct Add: View {
                         .pickerStyle(.segmented)
                         .frame(width: 358)
                         
+                       
+                        
                     }
                     ZStack{
                         
@@ -200,9 +208,12 @@ struct Add: View {
                             
                                 .frame(width: 339, height: 50)
                             
+                            Spacer()
+                                .frame(height:60)
                             
                         }
                     }
+                    
                     ZStack{
                         
                         RoundedRectangle(cornerRadius: 4.0)
@@ -219,7 +230,9 @@ struct Add: View {
                         }
                     }
                 }
-                    
+                
+                Spacer()
+                    .frame(height:30)
                 
                     VStack{
                         Button{
@@ -227,9 +240,9 @@ struct Add: View {
                         }label: {
                             Text("Add")
                                 .foregroundColor(Color.white)
-                                .frame(width: 358,height: 50)
-                                .background(Color("Color1"))
-                                .cornerRadius(4.0)
+                                .frame(width: 350,height: 45)
+                                .background(Color("Color3"))
+                                .cornerRadius(10)
                         }
                         .padding(.top, 30.0)
                     }
