@@ -44,7 +44,7 @@ struct sign_in: View {
                 .padding(.vertical,0)
                 .offset(x:-4,y:10)
             HStack {
-                TextField("N346455_4", text:
+                TextField("Password", text:
                             $password)
                 .padding(.leading, 34.0)
                 .foregroundColor(.black)

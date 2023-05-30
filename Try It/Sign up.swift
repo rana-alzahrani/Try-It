@@ -11,7 +11,7 @@ struct Sign_up: View {
     @State private var name: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
-    
+    @State var visible = false
     @StateObject private var vm = SignUpViewModel()
     @EnvironmentObject var coordinator: Coordinator
     
@@ -62,23 +62,36 @@ struct Sign_up: View {
                 .fontWeight(.medium)
                 .padding(.vertical,0)
                 .offset(x:-4,y:10)
-            HStack {
-                TextField("N346455_4", text:
-                            $password)
-                .padding(.leading, 34.0)
-                .foregroundColor(.black)
-                .frame(width:320, height:27)
-                Image(systemName: "eye.slash")
-                //                    .offset(x:-17,y:2)
-                    .padding()
-                    .foregroundColor(Color("color line"))
-                
+            HStack(spacing :15){
+         
+                VStack{
+                    
+                    if self.visible{
+                        
+                        TextField("Password", text:self.$password)
+                        .foregroundColor(.black)
+                        .padding(.leading,10)
+                    }
+                    else
+                    {
+                        SecureField("Password", text:self.$password)
+                            .foregroundColor(.black)
+                            .padding(.leading,10)
+                    }
+                }
+                Button(action: {
+                    
+                    self.visible.toggle()
+                }) {
+                  
+                    Image(systemName: self.visible ? "eye.slash.fill" : "eye.fill")
+                        .foregroundColor(.black)
+                        .padding(.trailing,10)
+                }
             }
-            
             .padding()
-            .overlay(RoundedRectangle(cornerRadius: 11).stroke(lineWidth: 1)
-                .foregroundColor(Color("color g"))
-                .frame(width:358, height:44))
+            .background(RoundedRectangle(cornerRadius: 11).stroke(self.password != "" ? Color("color g") : Color("color g"),lineWidth: 2)
+            .frame(width:358, height:44))
             
             Button("Sign Up") {
                 
@@ -112,6 +125,7 @@ struct Sign_up: View {
                 
                 
             }
+            
             HStack{
                 Text("Already have an account?")
                     .foregroundColor(.black)
