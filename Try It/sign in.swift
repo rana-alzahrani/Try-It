@@ -11,7 +11,7 @@ struct sign_in: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var checked1 = false
-    
+    @State var visible = false
     
     
     var body: some View {
@@ -43,25 +43,36 @@ struct sign_in: View {
                 .fontWeight(.medium)
                 .padding(.vertical,0)
                 .offset(x:-4,y:10)
-            HStack {
-                TextField("Password", text:
-                            $password)
-                .padding(.leading, 34.0)
-                .foregroundColor(.black)
-                .frame(width:320, height:27)
-                .offset(x:-17,y:2)
-                
-                Image(systemName: "eye.slash")
-                    .offset(x:-17,y:2)
-                //                    .padding()
-                    .foregroundColor(Color("color line"))
-                
+            HStack(spacing :15){
+         
+                VStack{
+                    
+                    if self.visible{
+                        
+                        TextField("Password", text:self.$password)
+                        .foregroundColor(.black)
+                        .padding(.leading,10)
+                    }
+                    else
+                    {
+                        SecureField("Password", text:self.$password)
+                            .foregroundColor(.black)
+                            .padding(.leading,10)
+                    }
+                }
+                Button(action: {
+                    
+                    self.visible.toggle()
+                }) {
+                  
+                    Image(systemName: self.visible ? "eye.slash.fill" : "eye.fill")
+                        .foregroundColor(.black)
+                        .padding(.trailing,10)
+                }
             }
-            
             .padding()
-            .overlay(RoundedRectangle(cornerRadius: 11).stroke(lineWidth: 1)
-                .foregroundColor(Color("color g"))
-                .frame(width:358, height:44))
+            .background(RoundedRectangle(cornerRadius: 11).stroke(self.password != "" ? Color("color g") : Color("color g"),lineWidth: 2)
+            .frame(width:358, height:44))
             
             
             VStack {
