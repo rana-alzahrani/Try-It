@@ -12,6 +12,9 @@ struct Sign_up: View {
     @State private var email: String = ""
     @State private var password: String = ""
     
+    @StateObject private var vm = SignUpViewModel()
+    @EnvironmentObject var coordinator: Coordinator
+    
     var body: some View {
         VStack{
             Text("Name")
@@ -77,16 +80,34 @@ struct Sign_up: View {
                 .foregroundColor(Color("color g"))
                 .frame(width:358, height:44))
             
-            Button {
-            }label: {
-                Text("Sign up")
+            Button("Sign Up") {
                 
-                    .frame(width: 358, height: 50)
-                    .fontWeight(.semibold)
-                    .font(.system(size: 20))
-                    .foregroundColor(.white)
-                    .background(Color("Color3"))
-                    .cornerRadius(10)
+                
+                vm.signUp(email: email, password: password) { result in
+                    switch result {
+                    case .success(_):
+                        coordinator.path.append(.login)
+                    case .failure(let error):
+                        vm.errorMessage = error.errorMessage
+                    }
+                }
+                
+                
+            }
+            
+            if let errorMessage = vm.errorMessage {
+                Text(errorMessage)
+            }
+            
+        label: do {
+//                Text("Sign up")
+//
+//                    .frame(width: 358, height: 50)
+//                    .fontWeight(.semibold)
+//                    .font(.system(size: 20))
+//                    .foregroundColor(.white)
+//                    .background(Color("color p"))
+//                    .cornerRadius(10)
                 
                 
                 

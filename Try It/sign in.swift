@@ -11,9 +11,9 @@ struct sign_in: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var checked1 = false
-
-
-
+    
+    
+    
     var body: some View {
         VStack{
             
@@ -65,28 +65,28 @@ struct sign_in: View {
             
             
             VStack {
-            HStack(){
-                CheckBoxView(checked: $checked1)
-                
-                Text("Remember me")
-                    .foregroundColor(.black)
-                    .font(.system(size: 12))
-                    .fontWeight(.regular)
-
-
-
+                HStack(){
+                    CheckBoxView(checked: $checked1)
+                    
+                    Text("Remember me")
+                        .foregroundColor(.black)
+                        .font(.system(size: 12))
+                        .fontWeight(.regular)
+                    
+                    
+                    
+                }
             }
-        }
             
             Button {
             }label: {
-                Text("Sign up")
+                Text("Sign in")
                 
                     .frame(width: 358, height: 50)
                     .fontWeight(.semibold)
                     .font(.system(size: 20))
                     .foregroundColor(.white)
-                    .background(Color("Color3"))
+                    .background(Color("color p"))
                     .cornerRadius(10)
                     .padding(.top,100.0)
                 
@@ -94,11 +94,11 @@ struct sign_in: View {
                 
             }
             HStack{
-                Text("Don’t have an account? ")
+                Text("Don’t have an account ?")
                     .foregroundColor(.black)
                     .offset(y:30)
                     .font(.system(size: 12))
-
+                
                 
                 Button{
                     
@@ -118,7 +118,16 @@ struct sign_in: View {
     
     struct sign_in_Previews: PreviewProvider {
         static var previews: some View {
-            sign_in()
+            NavigationStack {
+                sign_in()
+            }.navigationDestination(for: Route.self) { route in
+                switch route {
+                case .login:
+                    Text("login screen")
+                    
+                    
+                }
+            }
         }
     }
 }
