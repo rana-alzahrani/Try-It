@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+
 
 struct sign_in: View {
     @State private var email: String = ""
@@ -13,10 +15,19 @@ struct sign_in: View {
     @State private var checked1 = false
     @State var visible = false
     
-    
+    func login()
+    {
+        Auth.auth().signIn(withEmail: email, password: password){
+            result , error in
+            if error != nil {
+                print(error!.localizedDescription)
+            }else {
+                print("Login scsuufly")
+            }
+        }
+    }
     var body: some View {
         VStack{
-            
             Text("Email")
                 .frame(width: 360,alignment: .leading)
                 .foregroundColor(.black)

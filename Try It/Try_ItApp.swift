@@ -38,7 +38,7 @@ struct Try_It: App {
   var body: some Scene {
     WindowGroup {
         NavigationStack(path: $coordinator.path) {
-            Sign_up()
+            sign_in()
               .navigationDestination(for: Route.self) { route in
                   switch route {
                      case .login:
