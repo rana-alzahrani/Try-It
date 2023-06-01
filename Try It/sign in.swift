@@ -97,7 +97,7 @@ struct sign_in: View {
                     .fontWeight(.semibold)
                     .font(.system(size: 20))
                     .foregroundColor(.white)
-                    .background(Color("color p"))
+                    .background(Color("Color3"))
                     .cornerRadius(10)
                     .padding(.top,100.0)
                 
