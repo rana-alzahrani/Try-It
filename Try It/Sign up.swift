@@ -1,9 +1,9 @@
-//
+
 //  Sign up.swift
 //  Try It
 //
 //  Created by Atheer on 04/11/1444 AH.
-//
+
 
 import SwiftUI
 
@@ -29,13 +29,11 @@ struct Sign_up: View {
                             $name)
                 .foregroundColor(.black)
                 .frame(width:320, height:27)
-                
             }
             .padding()
             .overlay(RoundedRectangle(cornerRadius: 11).stroke(lineWidth: 1)
                 .foregroundColor(Color("color g"))
                 .frame(width:358, height:44))
-            
             Text("Email")
                 .frame(width: 360,alignment: .leading)
                 .foregroundColor(.black)
@@ -48,13 +46,11 @@ struct Sign_up: View {
                             $email)
                 .foregroundColor(.black)
                 .frame(width:320, height:27)
-                
             }
             .padding()
             .overlay(RoundedRectangle(cornerRadius: 11).stroke(lineWidth: 1)
                 .foregroundColor(Color("color g"))
                 .frame(width:358, height:44))
-            
             Text("Password")
                 .frame(width: 360,alignment: .leading)
                 .foregroundColor(.black)
@@ -63,14 +59,11 @@ struct Sign_up: View {
                 .padding(.vertical,0)
                 .offset(x:-4,y:10)
             HStack(spacing :15){
-         
                 VStack{
-                    
                     if self.visible{
-                        
                         TextField("Password", text:self.$password)
-                        .foregroundColor(.black)
-                        .padding(.leading,10)
+                            .foregroundColor(.black)
+                            .padding(.leading,10)
                     }
                     else
                     {
@@ -80,10 +73,8 @@ struct Sign_up: View {
                     }
                 }
                 Button(action: {
-                    
                     self.visible.toggle()
                 }) {
-                  
                     Image(systemName: self.visible ? "eye.slash.fill" : "eye.fill")
                         .foregroundColor(.black)
                         .padding(.trailing,10)
@@ -91,14 +82,10 @@ struct Sign_up: View {
             }
             .padding()
             .background(RoundedRectangle(cornerRadius: 11).stroke(self.password != "" ? Color("color g") : Color("color g"),lineWidth: 2)
-            .frame(width:358, height:44))
-            
+                .frame(width:358, height:44))
             Spacer()
                 .frame(height:60)
-            
             Button() {
-                
-                
                 vm.signUp(email: email, password: password) { result in
                     switch result {
                     case .success(_):
@@ -114,21 +101,15 @@ struct Sign_up: View {
                     .background(Color("Color3"))
                     .cornerRadius(10)
             }
-            
             if let errorMessage = vm.errorMessage {
                 Text(errorMessage)
             }
-            
-            
             HStack{
                 Text("Already have an account?")
                     .foregroundColor(.black)
                     .offset(y:30)
                     .font(.system(size: 12))
-                
-                
                 Button{
-                    
                 }label: {
                     Text("Sign in")
                         .foregroundColor(.black)
@@ -138,7 +119,6 @@ struct Sign_up: View {
                 }
                 .offset(y:30)
             }
-            
         }
     }
     

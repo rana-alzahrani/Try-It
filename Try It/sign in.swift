@@ -1,20 +1,18 @@
-//
+
 //  sign in.swift
 //  Try It
 //
 //  Created by Atheer on 04/11/1444 AH.
-//
+
 
 import SwiftUI
 import Firebase
-
 
 struct sign_in: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var checked1 = false
     @State var visible = false
-    
     func login()
     {
         Auth.auth().signIn(withEmail: email, password: password){
@@ -46,7 +44,6 @@ struct sign_in: View {
             .overlay(RoundedRectangle(cornerRadius: 11).stroke(lineWidth: 1)
                 .foregroundColor(Color("color g"))
                 .frame(width:358, height:44))
-            
             Text("Password")
                 .frame(width: 360,alignment: .leading)
                 .foregroundColor(.black)
@@ -55,14 +52,11 @@ struct sign_in: View {
                 .padding(.vertical,0)
                 .offset(x:-4,y:10)
             HStack(spacing :15){
-         
                 VStack{
-                    
                     if self.visible{
-                        
                         TextField("Password", text:self.$password)
-                        .foregroundColor(.black)
-                        .padding(.leading,10)
+                            .foregroundColor(.black)
+                            .padding(.leading,10)
                     }
                     else
                     {
@@ -72,10 +66,8 @@ struct sign_in: View {
                     }
                 }
                 Button(action: {
-                    
                     self.visible.toggle()
                 }) {
-                  
                     Image(systemName: self.visible ? "eye.slash.fill" : "eye.fill")
                         .foregroundColor(.black)
                         .padding(.trailing,10)
@@ -83,27 +75,19 @@ struct sign_in: View {
             }
             .padding()
             .background(RoundedRectangle(cornerRadius: 11).stroke(self.password != "" ? Color("color g") : Color("color g"),lineWidth: 2)
-            .frame(width:358, height:44))
-            
-            
+                .frame(width:358, height:44))
             VStack {
                 HStack(){
                     CheckBoxView(checked: $checked1)
-                    
                     Text("Remember me")
                         .foregroundColor(.black)
                         .font(.system(size: 12))
                         .fontWeight(.regular)
-                    
-                    
-                    
                 }
             }
-            
             Button {
             }label: {
                 Text("Sign in")
-                
                     .frame(width: 358, height: 50)
                     .fontWeight(.semibold)
                     .font(.system(size: 20))
@@ -111,19 +95,13 @@ struct sign_in: View {
                     .background(Color("Color3"))
                     .cornerRadius(10)
                     .padding(.top,100.0)
-                
-                
-                
             }
             HStack{
                 Text("Don’t have an account ?")
                     .foregroundColor(.black)
                     .offset(y:30)
                     .font(.system(size: 12))
-                
-                
                 Button{
-                    
                 }label: {
                     Text("Sign up")
                         .foregroundColor(.black)
@@ -134,9 +112,7 @@ struct sign_in: View {
                 .offset(y:30)
             }
         }
-        
     }
-    
     
     struct sign_in_Previews: PreviewProvider {
         static var previews: some View {
@@ -146,8 +122,6 @@ struct sign_in: View {
                 switch route {
                 case .login:
                     Text("login screen")
-                    
-                    
                 }
             }
         }

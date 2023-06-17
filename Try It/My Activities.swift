@@ -1,9 +1,9 @@
-//
+
 //  My Activities.swift
 //  Try It
 //
 //  Created by Rana on 03/11/1444 AH.
-//
+
 
 import SwiftUI
 

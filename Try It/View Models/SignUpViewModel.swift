@@ -1,20 +1,19 @@
-//
+
 //  SignUpViewModel.swift
 //  Try It
 //
 //  Created by Atheer on 10/11/1444 AH.
-//
+
 
 import Foundation
 import FirebaseAuth
 
 enum FBError: Error, Identifiable {
-     case error(String)
+    case error(String)
     
     var id: UUID {
-         UUID()
+        UUID()
     }
-    
     var errorMessage: String {
         switch self {
         case .error(let message):
@@ -24,13 +23,9 @@ enum FBError: Error, Identifiable {
 }
 
 class SignUpViewModel: ObservableObject {
-    
     @Published var errorMessage: String?
-    
     func signUp(email: String, password: String, completion: @escaping (Result<Bool, FBError>) -> Void) {
-        
         Auth.auth() .createUser(withEmail: email, password: password) { result, error in
-            
             if let error {
                 DispatchQueue.main.async {
                     completion(.failure(.error(error.localizedDescription)))
@@ -40,9 +35,6 @@ class SignUpViewModel: ObservableObject {
                     completion(.success(true))
                 }
             }
-            
         }
-        
     }
-    
 }
